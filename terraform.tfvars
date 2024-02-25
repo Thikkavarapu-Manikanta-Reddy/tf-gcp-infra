@@ -22,7 +22,7 @@ internet_gateway_route_priority                = 2000
 
 allow_firewall_name = "my-firewall-allow-8080"
 deny_firewall_name  = "ssh-deny-firewall-rule"
-allowed_port_list   = [80,8080,22,3306]
+allowed_port_list   = [80,8080,22]
 allow_protocol      = "tcp"
 deny_protocol       = "all"
 deny_ports          = []
