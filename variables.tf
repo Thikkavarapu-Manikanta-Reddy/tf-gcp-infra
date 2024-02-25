@@ -23,7 +23,7 @@ variable "zone" {
 variable "num_vpcs" {
   description = "The number of VPCs need to be created"
   type        = number
-  default     = 2
+  default     = 1
 }
 
 variable "vpc_name" {
@@ -56,6 +56,19 @@ variable "vpc_cidr_range" {
   default     = "10.0.0.0/16"
 }
 
+variable "webapp_cidr_range" {
+  description = "CIDR range for the network"
+  type        = string
+  default     = "10.0.0.0/16"
+}
+
+variable "db_cidr_range" {
+  description = "CIDR range for the network"
+  type        = string
+  default     = "10.0.0.0/16"
+}
+
+
 variable "public_subnet_name" {
   description = "Name of the subnet of the web app"
   type        = string
@@ -84,4 +97,65 @@ variable "webapp_internet_gateway_route_next_hop_gateway" {
   description = "Next hop gateway for the route webapp-internet-gateway-route"
   type        = string
   default     = "default-internet-gateway"
+}
+
+variable "internet_gateway_route_priority" {
+  type = number
+}
+
+variable "allow_firewall_name" {
+  type = string
+}
+
+variable "allowed_port_list" {
+  type = list(number)
+}
+
+variable "allow_protocol" {
+  type = string
+}
+
+variable "firewall_src_range" {
+  type = list(string)
+}
+
+variable "deny_firewall_name" {
+  type = string
+}
+variable "deny_protocol" {
+  type = string
+}
+variable "deny_ports" {
+  type = list(number)
+}
+
+variable "vm_instance_name" {
+  type = string
+}
+
+variable "vm_instance_zone" {
+  type = string
+}
+
+variable "vm_instance_machine_type" {
+  type = string
+}
+
+variable "vm_instance_image" {
+  type = string
+}
+
+variable "vm_instance_disk_type" {
+  type = string
+}
+
+variable "vm_instance_disk_size_gb" {
+  type = number
+}
+variable "vm_tag" {
+  type = list(string)
+}
+
+variable "allow_firewall_rule_priority" {
+  type = number
 }
