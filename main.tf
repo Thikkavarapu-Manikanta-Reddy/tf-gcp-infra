@@ -59,7 +59,7 @@ resource "google_compute_firewall" "deny_rule" {
 
   source_ranges = var.firewall_src_range
 }
-  
+
 resource "google_compute_instance" "custom_vm_instance" {
   name         = var.vm_instance_name
   zone         = var.vm_instance_zone
