@@ -229,13 +229,13 @@ variable "password_restriction_length" {
 
 variable "password_restriction_special_characters_allowed" {
   type    = bool
-  default = true
+  default = false
 }
 
-variable "password_restriction_override_special" {
-  type    = string
-  default = "!#%*()-_+[]{}<>:?"
-}
+# variable "password_restriction_override_special" {
+#   type    = string
+#   default = "!#%*()-_+[]{}<>:?"
+# }
 
 variable "private_ip_block_name" {
   type    = string
