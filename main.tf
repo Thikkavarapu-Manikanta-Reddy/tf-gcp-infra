@@ -134,8 +134,8 @@ resource "google_sql_database_instance" "main_primary" {
 }
 
 resource "random_password" "password" {
-  length           = var.password_restriction_length
-  special          = var.password_restriction_special_characters_allowed
+  length  = var.password_restriction_length
+  special = var.password_restriction_special_characters_allowed
   # override_special = var.password_restriction_override_special
 }
 
