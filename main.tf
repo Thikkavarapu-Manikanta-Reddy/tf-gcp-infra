@@ -233,7 +233,7 @@ resource "google_storage_bucket_object" "function_code_object" {
   content_type = var.bucket_params.content_type
   bucket = google_storage_bucket.function_code_bucket.name
   source = data.archive_file.default.output_path
-  # depends_on = [ google_storage_bucket.function_code_bucket ]
+  depends_on = [ google_storage_bucket.function_code_bucket ]
 }
 
 resource "google_cloudfunctions_function" "email_verification_function" {
@@ -254,7 +254,8 @@ resource "google_cloudfunctions_function" "email_verification_function" {
   # Cloud Function environment variables for MailGun & SQL connection
   environment_variables = {
     MAILGUN_API_KEY = var.mailgun_api_key,
-    MAIL_GUN_DOMAIN_NAME = var.mailgun_domain_name
+    MAIL_GUN_DOMAIN_NAME = var.mailgun_domain_name,
+    DOMAIN_NAME = var.domain_name,
     hostname = google_sql_database_instance.main_primary.private_ip_address,
     username = google_sql_user.db_user.name,
     password = random_password.password.result,

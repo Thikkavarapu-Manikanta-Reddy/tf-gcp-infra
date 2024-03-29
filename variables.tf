@@ -285,9 +285,13 @@ variable "projectId" {
   default = "csye6255-assignment-3-414221"
 }
 
-variable "mailgun_domain_name" {
+variable "domain_name" {
   type    = string
   default = "manikantareddythikkavarapu.me"
+}
+
+variable "mailgun_domain_name" {
+  type    = string
 }
 
 variable "mailgun_api_key" {
