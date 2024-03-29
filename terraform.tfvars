@@ -39,3 +39,6 @@ vm_tag                       = ["my-vm-tag"]
 allow_firewall_rule_priority = 699
 
 database_instance_tier = "db-g1-small"
+
+mailgun_api_key="f68a26c9-d0641728"
+mailgun_domain_name="sandboxbd0ad96e77b74f7fb6219b3f816c92e1.mailgun.org"
