@@ -251,7 +251,7 @@ resource "google_cloudfunctions_function" "email_verification_function" {
     resource   = google_pubsub_topic.verify_email.name
   }
 
-  # Cloud Function environment variables for SQL connection
+  # Cloud Function environment variables for MailGun & SQL connection
   environment_variables = {
     MAILGUN_API_KEY = var.mailgun_api_key,
     MAIL_GUN_DOMAIN_NAME = var.mailgun_domain_name
