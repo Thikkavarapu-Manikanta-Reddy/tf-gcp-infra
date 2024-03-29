@@ -284,3 +284,80 @@ variable "projectId" {
   type    = string
   default = "csye6255-assignment-3-414221"
 }
+
+variable "mailgun_domain_name" {
+  type    = string
+  default = "manikantareddythikkavarapu.me"
+}
+
+variable "mailgun_api_key" {
+  type = string
+}
+
+variable "serverless_vpc_connector_name" {
+  type    = string
+  default = "serverless-vpc-connector"
+}
+
+variable "serverless_vpc_connector_ip_cidr_range" {
+  type    = string
+  default = "10.8.0.0/28"
+}
+
+variable "env_dns_zone_name" {
+  type    = string
+  default = "manikanta-reddy-thikkavarapu"
+}
+
+variable "email_verification_topic_name" {
+  type    = string
+  default = "verify_email"
+}
+
+variable "email_verification_topic_ttl" {
+  type    = string
+  default = "604800s"
+}
+
+variable "google_storage_bucket_name" {
+  type    = string
+  default = "bucket_code_manikantacl"
+}
+
+variable "bucket_params" {
+  type = object({
+    obj_name = string
+    content_type = string
+    file_op_path= string
+    file_src_path = string
+    # uniform_bucket_level_access = bool
+  })
+
+  default = {
+    obj_name = "serverlessCode"
+    content_type = "application/zip"
+    file_op_path = "/tmp/function-source.zip"
+    file_src_path = "./serverless_zip/"
+    # uniform_bucket_level_access = true
+  }
+}
+
+variable "email_verification_function" {
+  type    = string
+  default = "emailVerification"
+}
+
+variable "email_verification_function_run_time" {
+  type    = string
+  default = "nodejs18"
+}
+
+variable "email_verification_function_entry_point" {
+  type    = string
+  default = "helloPubSub"
+}
+
+variable "email_verification_function_available_memory" {
+  type    = number
+  default = 256
+}
