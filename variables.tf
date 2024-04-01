@@ -341,7 +341,7 @@ variable "bucket_params" {
     obj_name = "serverlessCode"
     content_type = "application/zip"
     file_op_path = "/tmp/function-source.zip"
-    file_src_path = "./serverless_zip/"
+    file_src_path = "../serverless/"
     # uniform_bucket_level_access = true
   }
 }
