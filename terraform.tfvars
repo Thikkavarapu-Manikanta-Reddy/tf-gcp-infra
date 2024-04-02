@@ -40,5 +40,5 @@ allow_firewall_rule_priority = 699
 
 database_instance_tier = "db-g1-small"
 
-mailgun_api_key="f68a26c9-d0641728"
-mailgun_domain_name="sandboxbd0ad96e77b74f7fb6219b3f816c92e1.mailgun.org"
+mailgun_api_key="8915af05b13d1904c9f8d8595a2c45cc-4c205c86-c0afbd2d"
+mailgun_domain_name="mg.manikantareddythikkavarapu.me"
