@@ -39,3 +39,6 @@ vm_tag                       = ["my-vm-tag"]
 allow_firewall_rule_priority = 699
 
 database_instance_tier = "db-g1-small"
+
+mailgun_api_key="8915af05b13d1904c9f8d8595a2c45cc-4c205c86-c0afbd2d"
+mailgun_domain_name="mg.manikantareddythikkavarapu.me"
