@@ -365,3 +365,102 @@ variable "email_verification_function_available_memory" {
   type    = number
   default = 256
 }
+
+variable "server_port" {
+  type    = number
+  default = 8080
+}
+variable "cloudfunction_ingress_settings" {
+  description = "Cloud Function Ingress settings"
+  type        = string
+}
+
+variable "cloudfunction_all_traffic_on_latest_revision" {
+  description = "Cloud Function All traffic"
+  type        = bool
+}
+
+variable "eventtrigger_retry_policy" {
+  description = "Event trigger retry policy"
+  type        = string
+}
+
+variable "max_instance_count" {
+  description = "Max instance count"
+  type        = number
+}
+variable "min_instance_count" {
+  description = "Min instance count"
+  type        = number
+}
+variable "available_memory" {
+  description = "Cloud Function Available memory"
+  type        = string
+}
+variable "timeout_seconds" {
+  description = "Cloud Function timeout_seconds"
+  type        = number
+}
+variable "vpc_connector_egress_settings" {
+  description = "VPC connector egress settings"
+  type        = string
+}
+variable "cloudfunction_account_id" {
+  description = "The account id of Cloud Function"
+  type        = string
+}
+variable "cloudfunction_display_name" {
+  description = "The display Name of Cloud Function"
+  type        = string
+}
+variable "pubsub_subscription_name" {
+  description = "Pub/Sub Subscription Name"
+  type        = string
+}
+variable "ack_deadline_seconds" {
+  description = "Ack Deadline Seconds"
+  type        = number
+}
+variable "ttl" {
+  description = "Pub/Sub TTL"
+  type        = string
+}
+
+variable "template_name" {
+  type    = string
+  default = "appserver-template"
+}
+
+variable "instance_grp_name" {
+  type    = string
+  default = "my-instance-group-manager"
+}
+variable "check_interval_sec" {
+  type = number
+  default = 300
+}
+variable "health_check_timeout_seconds" {
+  type = number
+  default = 10
+}
+variable "healthy_threshold" {
+  type = number
+  default = 2
+}
+variable "unhealthy_threshold" {
+  type = number
+  default = 2
+}
+variable "health_check_port" {
+  type = number
+  default = 8080
+}
+variable "backendtimeout_sec" {
+  type = number
+  default = 10
+}
+
+variable "connection_draining_timeout_sec" {
+  type = number
+  default = 300
+}
