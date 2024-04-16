@@ -291,7 +291,7 @@ variable "domain_name" {
 }
 
 variable "mailgun_domain_name" {
-  type    = string
+  type = string
 }
 
 variable "mailgun_api_key" {
@@ -330,17 +330,17 @@ variable "google_storage_bucket_name" {
 
 variable "bucket_params" {
   type = object({
-    obj_name = string
-    content_type = string
-    file_op_path= string
+    obj_name      = string
+    content_type  = string
+    file_op_path  = string
     file_src_path = string
     # uniform_bucket_level_access = bool
   })
 
   default = {
-    obj_name = "serverlessCode"
-    content_type = "application/zip"
-    file_op_path = "/tmp/function-source.zip"
+    obj_name      = "serverlessCode"
+    content_type  = "application/zip"
+    file_op_path  = "/tmp/function-source.zip"
     file_src_path = "../serverless-zip/"
     # uniform_bucket_level_access = true
   }
@@ -436,31 +436,31 @@ variable "instance_grp_name" {
   default = "my-instance-group-manager"
 }
 variable "check_interval_sec" {
-  type = number
+  type    = number
   default = 300
 }
 variable "health_check_timeout_seconds" {
-  type = number
+  type    = number
   default = 10
 }
 variable "healthy_threshold" {
-  type = number
+  type    = number
   default = 2
 }
 variable "unhealthy_threshold" {
-  type = number
+  type    = number
   default = 2
 }
 variable "health_check_port" {
-  type = number
+  type    = number
   default = 8080
 }
 variable "backendtimeout_sec" {
-  type = number
+  type    = number
   default = 10
 }
 
 variable "connection_draining_timeout_sec" {
-  type = number
+  type    = number
   default = 300
 }
