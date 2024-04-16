@@ -40,5 +40,19 @@ allow_firewall_rule_priority = 699
 
 database_instance_tier = "db-g1-small"
 
-mailgun_api_key="8915af05b13d1904c9f8d8595a2c45cc-4c205c86-c0afbd2d"
-mailgun_domain_name="mg.manikantareddythikkavarapu.me"
+mailgun_api_key     = "8915af05b13d1904c9f8d8595a2c45cc-4c205c86-c0afbd2d"
+mailgun_domain_name = "mg.manikantareddythikkavarapu.me"
+
+eventtrigger_retry_policy                    = "RETRY_POLICY_RETRY"
+cloudfunction_ingress_settings               = "ALLOW_INTERNAL_ONLY"
+cloudfunction_all_traffic_on_latest_revision = true
+vpc_connector_egress_settings                = "PRIVATE_RANGES_ONLY"
+max_instance_count                           = 1
+min_instance_count                           = 0
+available_memory                             = "256M"
+timeout_seconds                              = 60
+cloudfunction_account_id                     = "function-sa"
+cloudfunction_display_name                   = "Function Service Account"
+pubsub_subscription_name                     = "verify_email_subscription"
+ack_deadline_seconds                         = 10
+ttl                                          = "604800s"
