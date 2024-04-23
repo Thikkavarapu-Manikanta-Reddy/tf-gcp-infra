@@ -57,12 +57,12 @@ pubsub_subscription_name                     = "verify_email_subscription"
 ack_deadline_seconds                         = 10
 ttl                                          = "604800s"
 
-template_tags                                = ["load-balanced-backend", "webapp"]
-http_named_port_name                         = "http"
-http_named_port_port                         = 8080
-base_instance_name                           = "my-custom-vm"
-instance_grp_target_size                     = 2
-auto_healing_policies_initial_delay_sec      = 300
+template_tags                           = ["load-balanced-backend", "webapp"]
+http_named_port_name                    = "http"
+http_named_port_port                    = 8080
+base_instance_name                      = "my-custom-vm"
+instance_grp_target_size                = 2
+auto_healing_policies_initial_delay_sec = 300
 
 autoscaler_name        = "my-auto-scaler"
 max_replicas           = 2

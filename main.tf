@@ -90,8 +90,8 @@ resource "google_compute_route" "internet_gateway_route" {
 # }
 
 resource "google_service_account" "vm_service_account" {
-  account_id                   = var.vm_service_account_account_id
-  display_name                 = var.vm_service_account_display_name
+  account_id   = var.vm_service_account_account_id
+  display_name = var.vm_service_account_display_name
   # create_ignore_already_exists = true
 }
 
@@ -168,8 +168,8 @@ resource "google_sql_database_instance" "main_primary" {
 }
 
 resource "random_password" "password" {
-  length           = var.password_restriction_length
-  special          = var.password_restriction_special_characters_allowed
+  length  = var.password_restriction_length
+  special = var.password_restriction_special_characters_allowed
   # override_special = var.password_restriction_override_special
 }
 
